@@ -1,2 +1,43 @@
 @import "style";
 
+main {
+
+
+    >div.script {
+
+        >h2{
+            text-align: center;
+            padding: 10px;
+            border-top: 5px  solid black;
+            border-bottom: 5px  solid black;        
+        }
+
+        >div {
+            justify-content: center;
+            padding: 20px;
+        }
+
+        table {
+            position: relative;
+            margin:auto;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bolder;
+            
+            tr {
+                padding: 100px;
+            }
+
+            .card {
+                width: auto;
+                margin: 5px;
+
+                .card-body {
+                    height:70px;
+                }
+            }
+        }
+
+    }
+
+}

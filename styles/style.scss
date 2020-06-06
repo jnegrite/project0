@@ -1,0 +1,50 @@
+
+$main_color:#bc002d;
+$main_back: white;
+$main_text: black;
+
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: $main_back;
+    color: $main_text;
+
+    header {
+        position: relative;
+        background-color: $main_color;
+        color:$main_back;
+        margin-top: 0px;
+        padding: 5px 30px;
+    }
+
+    nav {
+        background-color: $main_back;
+        font-weight: bold;
+        color: $main_color;
+        text-align: center;
+        width: 100%;
+        display: grid;
+        position: sticky;
+        z-index:10;
+        top:0px;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(4,1fr);
+
+        a {
+            position: static;
+            border: none;
+            padding: 10px;
+            color:$main_color;
+        }
+
+        a:any-link{
+            text-decoration: none;
+        }
+
+        a:hover,a.active {
+            background-color: $main_color;
+            color:$main_back;
+        }
+    }
+
+}

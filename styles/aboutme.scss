@@ -1,0 +1,65 @@
+
+@import "style";
+
+@media(min-width:700px){
+    main {
+        grid-template-areas: 'pic essay'
+                            'info essay';
+    }
+}
+
+@media(max-width:699px){
+    main {
+        grid-template-areas: 'pic info'
+                            'essay essay';
+    }
+}
+
+main{
+    position: relative;
+    align-self: center;
+    display: grid;
+    grid-template-columns: 250px minmax(100px,500px);
+    grid-template-rows: 250px minmax(100px,500px);
+    justify-content: center;
+
+    >div{
+        position:relative;
+        border: 1px solid yellow;
+        padding: 20px;
+        align-items: center;
+    }
+
+
+    #pic{
+        grid-area:pic;
+    }
+
+    #info{
+        grid-area:info;
+
+        #name {
+            font-weight: bolder;
+        }
+
+        #soc_med {
+            list-style-type: none;
+            padding-left:0px;
+
+            li{
+                display:inline;
+            }
+
+            img {
+                width: 40px;
+                height:40px;
+            }
+        }
+    }
+
+    #essay{
+        grid-area:essay;
+        background-color: blue;
+        height: 1000px;
+    }
+}

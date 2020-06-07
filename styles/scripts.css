@@ -18,15 +18,12 @@ body nav {
   color: #bc002d;
   text-align: center;
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  position: -webkit-sticky;
   position: sticky;
   z-index: 10;
   top: 0px;
   grid-auto-flow: column;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 body nav a {
@@ -34,14 +31,6 @@ body nav a {
   border: none;
   padding: 10px;
   color: #bc002d;
-}
-
-body nav a:-webkit-any-link {
-  text-decoration: none;
-}
-
-body nav a:-moz-any-link {
-  text-decoration: none;
 }
 
 body nav a:any-link {
@@ -54,11 +43,8 @@ body nav a:hover, body nav a.active {
 }
 
 main > div {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   padding: 20px;
   margin: 10px 100px;
   margin-bottom: 0px;
@@ -76,9 +62,7 @@ main > div.script > h2 {
 }
 
 main > div.script > div {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 20px;
 }
 
@@ -102,4 +86,3 @@ main > div.script table .card {
 main > div.script table .card .card-body {
   height: 70px;
 }
-/*# sourceMappingURL=scripts.css.map */

@@ -1,0 +1,72 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: white;
+  color: black;
+}
+
+body header {
+  position: relative;
+  background-color: #bc002d;
+  color: white;
+  margin-top: 0px;
+  padding: 5px 30px;
+}
+
+body nav {
+  background-color: white;
+  font-weight: bold;
+  color: #bc002d;
+  text-align: center;
+  width: 100%;
+  display: grid;
+  position: sticky;
+  z-index: 10;
+  top: 0px;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+body nav a {
+  position: static;
+  border: none;
+  padding: 10px;
+  color: #bc002d;
+}
+
+body nav a:any-link {
+  text-decoration: none;
+}
+
+body nav a:hover, body nav a.active {
+  background-color: #bc002d;
+  color: white;
+}
+
+main {
+  margin: 50px;
+}
+
+main div {
+  position: relative;
+  display: block;
+  margin: 40px 0px 20px 0px;
+}
+
+main div h2 {
+  position: relative;
+  display: inline;
+  padding: 10px;
+  border: 1px solid #bc002d;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #bc002d;
+  color: white;
+}
+
+main p {
+  position: relative;
+  margin: auto;
+  text-align: justify;
+  text-indent: 2em;
+}

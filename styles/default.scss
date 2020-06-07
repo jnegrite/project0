@@ -1,0 +1,32 @@
+@import "style";
+
+main {
+    margin: 50px;
+
+    div {
+        position:relative;
+        display: block;
+        margin: 40px 0px 20px 0px;
+
+        h2 {
+            position: relative;
+            display: inline;
+            padding: 10px;
+            border: 1px solid $main_color;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight:bold;
+            background-color: $main_color;
+            color:$main_back;
+        }
+    }
+
+    p {
+        position: relative;
+        margin:auto;
+        text-align:justify;
+        text-indent: 2em;
+    }
+
+
+}

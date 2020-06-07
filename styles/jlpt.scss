@@ -1,0 +1,38 @@
+@import "style";
+
+main {
+    p {
+        text-align:justify;
+    }
+
+    >div.description{
+        margin: 80px;
+    }
+
+    >div.container{
+        
+        >div.row {
+            border: 2px solid $main_color;
+            border-radius: 20px;
+            overflow: hidden;
+            margin: 20px 0px;
+            
+            div.head {
+                position: relative;
+                background-color: $main_color;
+                color: $main_back;
+                text-align:center;
+                padding: 20px;
+                
+                /*
+                h2{
+                    position:relative;
+                    margin: auto;
+                }
+                */
+            }
+
+
+        }
+    }
+}

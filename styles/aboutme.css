@@ -18,15 +18,12 @@ body nav {
   color: #bc002d;
   text-align: center;
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  position: -webkit-sticky;
   position: sticky;
   z-index: 10;
   top: 0px;
   grid-auto-flow: column;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
 }
 
 body nav a {
@@ -34,14 +31,6 @@ body nav a {
   border: none;
   padding: 10px;
   color: #bc002d;
-}
-
-body nav a:-webkit-any-link {
-  text-decoration: none;
-}
-
-body nav a:-moz-any-link {
-  text-decoration: none;
 }
 
 body nav a:any-link {
@@ -55,42 +44,47 @@ body nav a:hover, body nav a.active {
 
 @media (min-width: 700px) {
   main {
-        grid-template-areas: 'pic essay' 'info essay';
+    grid-template-areas: 'pic essay' 'info essay';
+    grid-template-columns: 350px minmax(150px, 500px);
   }
 }
 
 @media (max-width: 699px) {
   main {
-        grid-template-areas: 'pic info' 'essay essay';
+    grid-template-areas: 'pic info' 'essay essay';
+    grid-template-columns: 250px minmax(100px, 350px);
   }
 }
 
 main {
   position: relative;
-  -ms-grid-row-align: center;
-      align-self: center;
-  display: -ms-grid;
+  align-self: center;
   display: grid;
-  -ms-grid-columns: 250px minmax(100px, 500px);
-      grid-template-columns: 250px minmax(100px, 500px);
-  -ms-grid-rows: 250px minmax(100px, 500px);
-      grid-template-rows: 250px minmax(100px, 500px);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  grid-template-rows: 250px minmax(100px, 500px);
+  justify-content: center;
 }
 
 main > div {
   position: relative;
-  border: 1px solid yellow;
+  /*border: 1px solid yellow;*/
   padding: 20px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
+  margin: 50px;
 }
 
 main #pic {
   grid-area: pic;
+  width: 250px;
+  height: 250px;
+  justify-content: right;
+  padding: 0px;
+  border: 1px solid blue;
+  overflow: hidden;
+}
+
+main #pic img {
+  max-height: 100%;
+  margin-left: -100px;
 }
 
 main #info {
@@ -117,7 +111,7 @@ main #info #soc_med img {
 
 main #essay {
   grid-area: essay;
-  background-color: blue;
+  /*background-color: blue; */
   height: 1000px;
+  padding: 50px;
 }
-/*# sourceMappingURL=aboutme.css.map */

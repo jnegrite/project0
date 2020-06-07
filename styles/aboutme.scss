@@ -5,13 +5,15 @@
     main {
         grid-template-areas: 'pic essay'
                             'info essay';
-    }
+        grid-template-columns: 350px minmax(150px,500px)
+                        }
 }
 
 @media(max-width:699px){
     main {
         grid-template-areas: 'pic info'
                             'essay essay';
+        grid-template-columns: 250px minmax(100px,350px);
     }
 }
 
@@ -19,20 +21,31 @@ main{
     position: relative;
     align-self: center;
     display: grid;
-    grid-template-columns: 250px minmax(100px,500px);
     grid-template-rows: 250px minmax(100px,500px);
     justify-content: center;
 
     >div{
         position:relative;
-        border: 1px solid yellow;
+        /*border: 1px solid yellow;*/
         padding: 20px;
         align-items: center;
+        margin: 50px;
     }
 
 
     #pic{
         grid-area:pic;
+        width: 250px;
+        height:250px;
+        justify-content: right;
+        padding:0px;
+        border: 1px solid blue;
+        overflow: hidden;
+        
+        img{
+            max-height: 100%;
+            margin-left: -100px;
+        }
     }
 
     #info{
@@ -59,7 +72,8 @@ main{
 
     #essay{
         grid-area:essay;
-        background-color: blue;
+        /*background-color: blue; */
         height: 1000px;
+        padding: 50px;
     }
 }

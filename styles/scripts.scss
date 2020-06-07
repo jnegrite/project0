@@ -49,6 +49,23 @@ main {
             }
         }
 
+        
+        div.d-flex {
+            
+            display:flex;
+            flex-wrap: wrap;
+
+            margin:10px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bolder;
+            
+            .card{
+                min-width: 100px;
+                margin: 5px;
+            }
+            
+        }
     }
 
 }

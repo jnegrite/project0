@@ -2,8 +2,19 @@
 
 main {
 
+    >div {
+        justify-content: center;
+        align-content: center;
+        padding: 20px;
+        margin: 10px 100px;
+        margin-bottom: 0px;
+    }
+
 
     >div.script {
+        >.buffer {
+            height:10px;
+        }
 
         >h2{
             text-align: center;

@@ -18,12 +18,15 @@ body nav {
   color: #bc002d;
   text-align: center;
   width: 100%;
+  display: -ms-grid;
   display: grid;
+  position: -webkit-sticky;
   position: sticky;
   z-index: 10;
   top: 0px;
   grid-auto-flow: column;
-  grid-template-columns: repeat(4, 1fr);
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 body nav a {
@@ -31,6 +34,14 @@ body nav a {
   border: none;
   padding: 10px;
   color: #bc002d;
+}
+
+body nav a:-webkit-any-link {
+  text-decoration: none;
+}
+
+body nav a:-moz-any-link {
+  text-decoration: none;
 }
 
 body nav a:any-link {
@@ -44,30 +55,38 @@ body nav a:hover, body nav a.active {
 
 @media (min-width: 700px) {
   main {
-    grid-template-areas: 'pic essay' 'info essay';
+        grid-template-areas: 'pic essay' 'info essay';
   }
 }
 
 @media (max-width: 699px) {
   main {
-    grid-template-areas: 'pic info' 'essay essay';
+        grid-template-areas: 'pic info' 'essay essay';
   }
 }
 
 main {
   position: relative;
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 250px minmax(100px, 500px);
-  grid-template-rows: 250px minmax(100px, 500px);
-  justify-content: center;
+  -ms-grid-columns: 250px minmax(100px, 500px);
+      grid-template-columns: 250px minmax(100px, 500px);
+  -ms-grid-rows: 250px minmax(100px, 500px);
+      grid-template-rows: 250px minmax(100px, 500px);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 main > div {
   position: relative;
   border: 1px solid yellow;
   padding: 20px;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 main #pic {
@@ -101,3 +120,4 @@ main #essay {
   background-color: blue;
   height: 1000px;
 }
+/*# sourceMappingURL=aboutme.css.map */

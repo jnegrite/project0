@@ -6,7 +6,7 @@ main {
     }
 
     >div.description{
-        margin: 80px;
+        margin: 50px;
     }
 
     >div.container{
@@ -22,14 +22,11 @@ main {
                 background-color: $main_color;
                 color: $main_back;
                 text-align:center;
-                padding: 20px;
-                
-                /*
-                h2{
-                    position:relative;
-                    margin: auto;
-                }
-                */
+                padding: 20px;    
+            }
+
+            div.body{
+                padding:20px;
             }
 
 

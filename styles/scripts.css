@@ -46,8 +46,15 @@ main > div {
   justify-content: center;
   align-content: center;
   padding: 20px;
-  margin: 10px 100px;
-  margin-bottom: 0px;
+  margin: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+main > div h4 {
+  margin: auto;
+  position: relative;
+  max-width: 1000px;
 }
 
 main > div.script > .buffer {
@@ -70,8 +77,12 @@ main > div.script table {
   position: relative;
   margin: auto;
   text-align: center;
-  font-size: 20px;
   font-weight: bolder;
+}
+
+main > div.script table th {
+  font-size: 20px;
+  padding: 20px;
 }
 
 main > div.script table tr {
@@ -80,7 +91,13 @@ main > div.script table tr {
 
 main > div.script table .card {
   width: auto;
-  margin: 5px;
+  margin: 10px;
+}
+
+@media screen and (max-width: 720px) {
+  main > div.script table .card {
+    margin: 0px;
+  }
 }
 
 main > div.script table .card .card-body {
@@ -92,11 +109,10 @@ main > div.script div.d-flex {
   flex-wrap: wrap;
   margin: 10px;
   text-align: center;
-  font-size: 20px;
   font-weight: bolder;
 }
 
 main > div.script div.d-flex .card {
-  min-width: 100px;
+  min-width: 50px;
   margin: 5px;
 }

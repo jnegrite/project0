@@ -1,21 +1,6 @@
 
 @import "style";
 
-@media(min-width:700px){
-    main {
-        grid-template-areas: 'pic essay'
-                            'info essay';
-        grid-template-columns: 350px minmax(150px,500px)
-                        }
-}
-
-@media(max-width:699px){
-    main {
-        grid-template-areas: 'pic info'
-                            'essay essay';
-        grid-template-columns: 250px minmax(100px,350px);
-    }
-}
 
 main{
     position: relative;
@@ -23,33 +8,54 @@ main{
     display: grid;
     grid-template-rows: 250px minmax(100px,500px);
     justify-content: center;
+    grid-template-areas: 'pic essay'
+    'info essay';
+    grid-template-columns: 350px minmax(150px,500px);
+
+    @media(max-width:699px){
+        grid-template-areas: 'pic info'
+                            'essay essay';
+        grid-template-columns: auto auto;
+    }
+
+    
+    @media screen and (max-width:500px){
+        grid-template-columns: 150 auto;
+    }
 
     >div{
         position:relative;
-        /*border: 1px solid yellow;*/
         padding: 20px;
         align-items: center;
-        margin: 50px;
+        margin: 5px;
     }
 
 
     #pic{
-        grid-area:pic;
+        display:flex;
         width: 250px;
         height:250px;
-        justify-content: right;
+        justify-content: center;
         padding:0px;
-        border: 1px solid blue;
+        align-items: center;
         overflow: hidden;
-        
+        margin: 20px;
+
+        @media screen and (max-width:500px){
+            width: 150px;
+            height: 150px;
+        }
+
         img{
-            max-height: 100%;
-            margin-left: -100px;
+            height: 100%;
+            margin-left:auto;
+            margin-right:auto;
         }
     }
 
     #info{
         grid-area:info;
+        float:left;
 
         #name {
             font-weight: bolder;

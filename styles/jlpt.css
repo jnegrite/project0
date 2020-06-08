@@ -47,7 +47,7 @@ main p {
 }
 
 main > div.description {
-  margin: 80px;
+  margin: 50px;
 }
 
 main > div.container > div.row {
@@ -63,10 +63,8 @@ main > div.container > div.row div.head {
   color: white;
   text-align: center;
   padding: 20px;
-  /*
-                h2{
-                    position:relative;
-                    margin: auto;
-                }
-                */
+}
+
+main > div.container > div.row div.body {
+  padding: 20px;
 }
